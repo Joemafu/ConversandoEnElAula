@@ -10,7 +10,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "deploy": "ng build && firebase deploy --only hosting && ionic cap sync"
+    "deploy": "ng build && firebase deploy --only hosting",
+    "androide": "ng buil && firebase deploy --only hosting && ionic cap sync"
   },
   "private": true,
   "dependencies": {
