@@ -11,7 +11,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "deploy": "ng build && firebase deploy --only hosting",
-    "androide": "ng buil && firebase deploy --only hosting && ionic cap sync"
+    "androide": "ng build && firebase deploy --only hosting && ionic cap build android"
   },
   "private": true,
   "dependencies": {

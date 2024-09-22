@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+body {
+    color: $fondo;
+}
+
+.texto {
+    color: $fuente;
+}
+
+button {
+    background-color: $boton;
+    color: $fuente-boton;
+}
+
+ion-content {
+    --background: $fondo;
+}
+
+ion-button {
+    --background: $boton;
+    --color: $fuente-boton;
+}
