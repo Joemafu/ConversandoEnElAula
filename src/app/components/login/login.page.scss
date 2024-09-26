@@ -1,5 +1,26 @@
+.full-height {
+  height: 100vh; /* Ocupa toda la altura del viewport */
+}
+
+.form-signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 ion-content {
-  --background: #F9EDB3 ; // Color de fondo específico para el contenido
+  --background: #ffee97 ; // Color de fondo específico para el contenido
   font-family: 'Roboto', sans-serif;
 }
 
@@ -13,9 +34,9 @@ ion-button {
 }
 
 .primary {
-  --background: #F9EDB3;
+  --background: #ffee97;
   --color: #6A5918;
-  --ion-color-primary: #F9EDB3;
+  --ion-color-primary: #ffee97;
   --ion-color-primary-contrast: #6A5918;
 }
 
