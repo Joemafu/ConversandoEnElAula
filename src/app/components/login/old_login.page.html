@@ -1,0 +1,52 @@
+<ion-content [fullscreen]="true">
+<main class="form-signin w-100 m-auto">
+  <div class="container-fluid d-flex justify-content-center align-items-center full-width">
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="needs-validation" novalidate>
+      <header></header>
+
+      <h3 class="texto h3 mb-3 fw-normal m-auto">Ingresar credenciales</h3>
+
+      @if(alert!='') {
+        <div class="alert alert-danger">
+            {{alert}}
+        </div>
+      }
+
+      <div class="form-floating">
+        <input formControlName="mail" name="mail" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="{{mail}}" (keyup.enter)="login()">
+        @if(loginForm.get('mail'); as aux) {
+          @if(aux.invalid && (aux.dirty || aux.touched)){
+              <div class="alert alert-danger">
+                  {{aux.hasError('required') ? 'Ingresá tu correo.' : 'Ingresá un correo válido.'}}
+              </div>
+          }   
+      }
+        <label for="floatingInput">Correo</label>
+      </div>
+      <div class="form-floating">
+        <input formControlName="pass" name="pass" type="password" class="form-control" id="floatingPassword" placeholder="Password" value="{{pass}}" (keyup.enter)="login()">
+        @if(loginForm.get('pass'); as aux) {
+          @if(aux.invalid && (aux.dirty || aux.touched)){
+              <div class="alert alert-danger">
+                  {{aux.hasError('required') ? 'Ingresá tu contraseña.' : 'Mínimo 6 caracteres.'}}
+              </div>
+          }   
+      }
+        <label for="floatingPassword">Contraseña</label>
+      </div>
+
+      <ion-button class="w-100 py-2 mb-3" type="submit">Iniciar sesión</ion-button>
+
+    </form>
+  </div>
+
+  <!-- DIV CENTRADO !!! -->
+  <div class="container-fluid d-flex justify-content-center align-items-center full-width">
+    <ion-button (click)="buttonDemoUno()">Admin</ion-button>
+    <ion-button (click)="buttonDemoDos()">Tester</ion-button>
+    <ion-button (click)="buttonDemoTres()">Usuario</ion-button>
+  </div>
+
+</main>
+</ion-content>

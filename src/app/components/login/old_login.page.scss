@@ -1,0 +1,111 @@
+.full-height {
+  height: 100vh; /* Ocupa toda la altura del viewport */
+}
+
+.form-signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+ion-content {
+  --background: #ffee97 ; // Color de fondo específico para el contenido
+  font-family: 'Roboto', sans-serif;
+}
+
+.texto {
+  color: #6A5918;
+}
+
+ion-button {
+  --background: #F5D364;
+  --color: #3C3C3C;
+}
+
+.primary {
+  --background: #ffee97;
+  --color: #6A5918;
+  --ion-color-primary: #ffee97;
+  --ion-color-primary-contrast: #6A5918;
+}
+
+.secondary {
+  --background: #F5D364;
+  --color: #3C3C3C;
+  --ion-color-secondary: #F5D364;
+  --ion-color-secondary-contrast: #3C3C3C;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 1rem;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="password"] {
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  .fab-container {
+    position: fixed;
+    bottom: 100px;
+    right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .fab-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .fab-buttons.open {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .fab-sub-button {
+    margin-bottom: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .fab-sub-button img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
