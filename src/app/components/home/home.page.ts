@@ -1,15 +1,16 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonCardSubtitle, IonCardHeader, IonCard, IonCardTitle, IonCardContent } from '@ionic/angular/standalone';
-import { AuthService } from '../services/auth.service';
+import { IonToolbar, IonTitle, IonContent, IonButton, IonCardSubtitle, IonCardHeader, IonCard, IonCardTitle, IonCardContent, IonFab, IonFabButton, IonIcon, IonItem } from '@ionic/angular/standalone';
+import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { ChatComponent } from '../chat/chat.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonButton, IonCardContent, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCard, IonHeader, IonToolbar, IonTitle, IonContent],
+  imports: [IonItem,  IonIcon, IonFabButton, IonFab, IonButton, IonCardContent, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCard, IonToolbar, IonTitle, IonContent, ChatComponent],
 })
 export class HomePage implements OnInit {
   
@@ -17,10 +18,7 @@ export class HomePage implements OnInit {
   router: Router = inject(Router);
   usuario: string = '';
   public subscription: Subscription = new Subscription();
-
-  logout() {
-    this.authService.logout();
-  }
+  selectedRoom: string = '';
 
   ngOnInit(): void {
     this.subscription = this.authService.user$.subscribe((user) => {
@@ -37,5 +35,17 @@ export class HomePage implements OnInit {
         this.authService.currentUserSig.set(null);    
       }
     });
+  }
+
+  goToRoom(room: string) {
+    this.selectedRoom = room;
+  }
+
+  goHome() {
+    this.selectedRoom = '';
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }

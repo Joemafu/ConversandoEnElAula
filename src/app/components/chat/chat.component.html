@@ -1,0 +1,37 @@
+<div [ngClass]="{'room-one': room === 'PPS-A141-1', 'room-two': room === 'PPS-A141-2'}" class="component" #chatBox>
+    <div class="container chatBox">
+        <div>
+            @if(messages) {
+            @for (message of messages; track message) {
+                @if(esMensajeUsuarioActual(message)){
+
+                    <div class="container-mychat item">
+                        <h6 class="item-chat center-align">{{formatearHora(message.date)}}</h6>
+                        <h6 class="item-chat right-align">Yo dije: </h6>
+                        <p class="item-chat right-align">{{ message.content }}</p>
+                    </div>    
+                }
+                @else {
+
+                    <div class="container-anotherchat item">
+                        <h6 class="item-chat center-align">{{formatearHora(message.date)}}</h6>
+                        <h6 class="item-chat">{{ message.mail }} dijo: </h6>
+                        <p class="item-chat">{{ message.content }}</p>
+                    </div>   
+                }
+            }
+        }
+        </div>
+    </div>
+
+    <div class="container">
+
+        <input style="flex: 1;" type="text" [(ngModel)]="message" (keyup.enter)="sendMessage()" id="messageInput" class="input-chat" placeholder="Escribe un mensaje...">
+        @if(message) {
+            <img (click)="sendMessage()" class="img activo" src="./../../../assets/icon/sendOn.svg" height="50px" alt="">
+        }
+        @else {
+            <img (click)="sendMessage()" class="img inactivo" src="./../../../assets/icon/sendOff.svg" height="50px" alt="">
+        }
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<ion-content #home>
+
+  @if(!selectedRoom)
+  {
+    <div class="button-container">
+      <ion-card class="sala-card" (click)="goToRoom('PPS-A141-1')">
+        <ion-card-content>
+          <p>PPS-A141-1</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="sala-card sala-cardDos" (click)="goToRoom('PPS-A141-2')">
+        <ion-card-content>
+          <p>PPS-A141-2</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  }
+
+  @if (selectedRoom)
+  {
+    <app-chat [room]="selectedRoom"></app-chat>
+    <ion-fab vertical="top" horizontal="start" slot="fixed">
+      <ion-fab-button class="fabNeon" (click)="goHome()">
+        <ion-icon name="home"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  }
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button class="fabNeon" (click)="logout()">
+      <ion-icon name="log-out"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

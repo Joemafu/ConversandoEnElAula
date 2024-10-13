@@ -20,6 +20,10 @@
               </div>
             </div>
 
+            <div *ngIf="alert!=''" class="alert alert-danger input_warning">
+              {{alert}}
+            </div>
+
             <button class="button login__submit" type="submit">
               <span class="button__text">Iniciar Sesión</span>
               <i class="button__icon bi bi-chevron-right"></i>
@@ -41,8 +45,6 @@
           </div>
 
         </div>
-
-        
 
         <div class="screen__background">
           <span class="screen__background__shape screen__background__shape4"></span>

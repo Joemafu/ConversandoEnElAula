@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'beon';
+    src:
+        url(../../../assets/fonts/beon-webfont.ttf) format('truetype'),
+        url(../../../assets/fonts/Beon.otf) format('opentype');
+  }
+
+.room-one
+{
+  .container {
+    background-color: rgba(218, 162, 255, 0.6); 
+    padding: 15px; 
+    font-family:Arial, Helvetica, sans-serif; 
+    text-shadow: 1px 1px 2px rgba(138,43,226);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+  }
+
+  .container-anotherchat {
+    width: 70%; 
+    float: left;
+    background-color :rgba(91, 61, 163, 0.65);
+    border-radius: 10px;
+  }
+
+  .container-mychat{
+      width: 70%;
+      float: right;
+      background-color :rgba(136, 2, 136, 0.65);
+      border-radius: 10px;
+  }
+
+  .input-chat{
+    background-color: rgba(136, 2, 136, 0.55);
+    border-radius: 5px; 
+    padding: 10px;
+    border-color: rgba(136, 2, 136, 0.95);
+    color: #fff;
+}
+}
+
+.room-two{
+  .container {
+    background-color: rgba(77, 39, 102, 0.5); 
+    padding: 15px; 
+    font-family:Arial, Helvetica, sans-serif; 
+    text-shadow: 1px 1px 2px rgba(29, 8, 49, 0.1);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+  }
+
+  .container-anotherchat {
+    width: 70%; 
+    float: left;
+    background-color :rgba(39, 20, 83, 0.65);
+    border-radius: 10px;
+  }
+
+  .container-mychat{
+      width: 70%;
+      float: right;
+      background-color :rgba(71, 5, 71, 0.65);
+      border-radius: 10px;
+  }
+
+  .input-chat{
+    background-color: rgba(71, 5, 71, 0.55);
+    border-radius: 5px; 
+    padding: 10px;
+    border-color: rgba(71, 5, 71, 0.95);
+    color: #fff;
+}
+}
+
+.chatBox{
+    overflow-y: auto;
+  }
+  
+  .item
+  {
+    margin: 10px;
+    padding: 10px;
+  }
+
+.right-align{
+    text-align: right;
+}
+
+.center-align{
+    text-align: center;
+    margin : 0 auto;
+}
+
+.item-chat{
+    margin: 0px;
+    padding : 0px;
+}
+
+.component{
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow-y: auto;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 5px;
+  background-color: #ff00ffc2; 
+  color: #00f; 
+  border: none; 
+  border-radius: 25px; 
+  cursor: pointer; 
+}
+
+.activo {  
+  transition: background-color 0.3s; 
+  box-shadow: 0px 4px 10px rgba(255, 0, 255, 0.4);
+}
+
+.inactivo{
+  background-color: #810381;
+}
