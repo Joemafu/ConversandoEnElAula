@@ -1,56 +1,53 @@
+<div class="screen">
+  <div class="screen__content">
 
-    <div class="container">
-      <div class="screen">
-        <div class="screen__content">
-
-          <form [formGroup]="loginForm" (ngSubmit)="login()" class="login">
-            <div class="login__field">
-              <i class="login__icon bi bi-envelope"></i>
-              <input formControlName="mail" name="mail" type="email" class="login__input" id="floatingInput" placeholder="Correo" value="{{ mail }}" />
-              <div *ngIf="loginForm.get('mail')?.invalid && (loginForm.get('mail')?.dirty || loginForm.get('mail')?.touched)" class="login__warning alert alert-danger">
-                {{ loginForm.get('mail')?.hasError('required') ? 'Ingresá tu correo.' : 'Ingresá un correo válido.' }}
-              </div>
-            </div>
-
-            <div class="login__field">
-              <i class="login__icon bi bi-lock"></i>
-              <input formControlName="pass" name="pass" type="password" class="login__input" id="floatingPassword" placeholder="Contraseña" value="{{ pass }}" />
-              <div *ngIf="loginForm.get('pass')?.invalid && (loginForm.get('pass')?.dirty || loginForm.get('pass')?.touched)" class="login__warning alert alert-danger">
-                {{ loginForm.get('pass')?.hasError('required') ? 'Ingresá tu contraseña.' : 'Mínimo 6 caracteres.' }}
-              </div>
-            </div>
-
-            <div *ngIf="alert!=''" class="alert alert-danger input_warning">
-              {{alert}}
-            </div>
-
-            <button class="button login__submit" type="submit">
-              <span class="button__text">Iniciar Sesión</span>
-              <i class="button__icon bi bi-chevron-right"></i>
-            </button>
-          </form>
-
-          <div class="d-flex flex-column justify-content-center align-items-center mt-4">
-            <div (click)="buttonDemoUno()" class="button login__demo" style="max-width: 150px;">
-              <span class="button__text">Administrador</span>
-            </div>
-
-            <div (click)="buttonDemoDos()" class="button login__demo" style="max-width: 150px;">
-              <span class="button__text">Testeador</span>
-            </div>
-
-            <div (click)="buttonDemoTres()" class="button login__demo" style="max-width: 150px;">
-              <span class="button__text">Usuario</span>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="screen__background">
-          <span class="screen__background__shape screen__background__shape4"></span>
-          <span class="screen__background__shape screen__background__shape3"></span>
-          <span class="screen__background__shape screen__background__shape2"></span>
-          <span class="screen__background__shape screen__background__shape1"></span>
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="d-flex flex-column login">
+      <div class="login__field">
+        <i class="login__icon bi bi-envelope"></i>
+        <input formControlName="mail" name="mail" type="email" class="login__input" id="floatingInput" placeholder="Correo" value="{{ mail }}" />
+        <div *ngIf="loginForm.get('mail')?.invalid && (loginForm.get('mail')?.dirty || loginForm.get('mail')?.touched)" class="login__warning alert alert-danger">
+          {{ loginForm.get('mail')?.hasError('required') ? 'Ingresá tu correo.' : 'Ingresá un correo válido.' }}
         </div>
       </div>
+
+      <div class="login__field">
+        <i class="login__icon bi bi-lock"></i>
+        <input formControlName="pass" name="pass" type="password" class="login__input" id="floatingPassword" placeholder="Contraseña" value="{{ pass }}" />
+        <div *ngIf="loginForm.get('pass')?.invalid && (loginForm.get('pass')?.dirty || loginForm.get('pass')?.touched)" class="login__warning alert alert-danger">
+          {{ loginForm.get('pass')?.hasError('required') ? 'Ingresá tu contraseña.' : 'Mínimo 6 caracteres.' }}
+        </div>
+      </div>
+
+      <div *ngIf="alert!=''" class="alert alert-danger input_warning">
+        {{alert}}
+      </div>
+
+      <button class="button login__submit" type="submit">
+        <span class="button__text">Iniciar Sesión</span>
+        <i class="button__icon bi bi-chevron-right"></i>
+      </button>
+    </form>
+
+    <div class="d-flex flex-column justify-content-center align-items-center mt-4">
+      <div (click)="buttonDemoUno()" class="button login__demo" style="max-width: 150px;">
+        <span class="button__text">Administrador</span>
+      </div>
+
+      <div (click)="buttonDemoDos()" class="button login__demo" style="max-width: 150px;">
+        <span class="button__text">Testeador</span>
+      </div>
+
+      <div (click)="buttonDemoTres()" class="button login__demo" style="max-width: 150px;">
+        <span class="button__text">Usuario</span>
+      </div>
     </div>
+
+  </div>
+
+  <div class="screen__background">
+    <span class="screen__background__shape screen__background__shape4"></span>
+    <span class="screen__background__shape screen__background__shape3"></span>
+    <span class="screen__background__shape screen__background__shape2"></span>
+    <span class="screen__background__shape screen__background__shape1"></span>
+  </div>
+</div>

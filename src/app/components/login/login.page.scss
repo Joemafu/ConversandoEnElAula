@@ -90,7 +90,8 @@ body {
 .login {
   padding: 30px;
   padding-top: 95px;
-  width: 100%;
+  //width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -117,15 +118,15 @@ body {
 .login__input:active,
 .login__input:focus,
 .login__input:hover {
-  outline: none;
-  border-bottom-color: #6A679E;
+  border-color: #242424;
+  box-shadow: 0px 4px 4px #242424;
 }
 
-.button__icon {
+/* .button__icon {
 	font-size: 24px;
 	margin-left: auto;
 	color: #7875B5;
-}
+} */
 
 .login__submit {
   background: #fff;
@@ -136,14 +137,13 @@ body {
   border: 1px solid #D4D3E8;
   text-transform: uppercase;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-
-  width: 100%;
   color: #4C489D;
   box-shadow: 0px 2px 2px #5C5696;
   cursor: pointer;
   transition: .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login__input {
@@ -154,7 +154,7 @@ body {
   padding: 10px;
   padding-left: 34px;
   font-weight: 700;
-  width: 100%;
+  /* width: 100%; */
   transition: .2s;
   background-color: rgba(66, 18, 66, 0.4);
   border-top-left-radius: 2px;
@@ -183,15 +183,15 @@ body {
 .login__submit:active,
 .login__submit:focus,
 .login__submit:hover {
-  border-color: #ffffff;
-  box-shadow: 0px 4px 4px #ffffff;
+  border-color: #242424;
+  box-shadow: 0px 4px 4px #242424;
 }
 
 .login__demo:active,
 .login__demo:focus,
 .login__demo:hover {
-  border-color: #6A679E;
-  box-shadow: 0px 4px 4px #6A679E;
+  border-color: #242424;
+  box-shadow: 0px 4px 4px #242424;
 }
 
 .d-flex ion-button {
