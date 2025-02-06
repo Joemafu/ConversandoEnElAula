@@ -72,20 +72,20 @@ export class ChatComponent implements OnInit, OnDestroy  {
   }
 
   protected sendMessage() {
-    if(this.message.length > 21) {
-      this.message = this.message.slice(0,21);
+    if(this.message.length > 100) {
+      this.message = this.message.slice(0,100);
       Swal.fire({
         position: "center",
         icon: 'error',
         title: 'Upa!',
-        text: 'El mensaje no puede superar los 21 caracteres',
+        text: 'El mensaje no puede superar los 100 caracteres',
         heightAuto: false,
         background: '#9955b4',
         showConfirmButton: false,
         timer: 2200,
         color: 'white'
       });
-    }  else if (this.message != '') {
+    } else if (this.message != '') {
       if(this.authService.currentUserSig() != null)
       {
         const obj: Message = {
