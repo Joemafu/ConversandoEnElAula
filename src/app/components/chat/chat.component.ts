@@ -77,7 +77,7 @@ export class ChatComponent implements OnInit, OnDestroy  {
       Swal.fire({
         position: "center",
         icon: 'error',
-        title: 'Upa!',
+        title: 'Ups!',
         text: 'El mensaje no puede superar los 100 caracteres',
         heightAuto: false,
         background: '#9955b4',
